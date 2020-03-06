@@ -12,8 +12,17 @@ openSAP HANA7 Course Excercise Materials and Code Snippets for HANA 2.0 SPS 03 O
 
 URL: https://github.com/SAP-samples/hana-xsa-opensap-hana7/tree/snippets_2.3.2
 
-## Features
+## Exercises
 
-- Hello World app with web module
-- **xs-security.json** Security implementation and UAA service
+### Exercise 1: Hello World
+
+- 1.1 HTML5 Module - Hello World with Security Implementation
+- 1.2 Clone a Repository from Git
+
+### Exercise 2: Database Artifact Development
+
+- 2.1 Database Content
+- 2.2 Create Tables & Views via Core Data Services
 - 
+
+ 
