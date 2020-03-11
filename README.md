@@ -23,6 +23,6 @@ URL: https://github.com/SAP-samples/hana-xsa-opensap-hana7/tree/snippets_2.3.2
 
 - 2.1 Database Content
 - 2.2 Create Tables & Views via Core Data Services
-- 
+- 2.3 Create Table Data Configuration
 
  
