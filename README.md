@@ -21,8 +21,12 @@ URL: https://github.com/SAP-samples/hana-xsa-opensap-hana7/tree/snippets_2.3.2
 
 ## Exercise 2: Database Artifact Development
 
+Prerequisites for exercise 2.6 and 2.8:
+URL: https://github.com/SAP-samples/hana-xsa-opensap-hana7/blob/master/install-all-prerequsites.txt
+
 - 2.1: Database Content
 - 2.2: Create Tables & Views via Core Data Services
 - 2.3: Create Table Data Configuration
 - 2.4: Create Tables & Views via SQL DDL Design Time Artifacts
 - 2.5: Create Structured Privilege & Role
+- 2.6: Non-Container Schemas, User Provided Services & Synonyms
