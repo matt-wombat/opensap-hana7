@@ -22,6 +22,16 @@ modules:
         properties:
           key: hdi-user-service
           service: '~{user-container-name}'
+  
+      - name: cross-container-service-2
+        group: SERVICE_REPLACEMENTS
+
+        properties:
+          key: ServiceName_2
+          service: ~{the-service-name}
+                            
+
+
   - name: srv
     type: nodejs
     path: srv
@@ -68,3 +78,11 @@ resources:
     properties:
       user-container-name: '${service-name}'
     type: com.sap.xs.hdi-container
+
+  - name: cross-container-service-2
+    parameters:
+       service-name: openSAP.CentralDB.opensap-central-container
+    properties:
+       the-service-name: ${service-name}
+    type: org.cloudfoundry.existing-service
+
