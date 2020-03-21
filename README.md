@@ -31,4 +31,4 @@ URL: https://github.com/SAP-samples/hana-xsa-opensap-hana7/blob/master/install-a
 - 2.5: Create Structured Privilege & Role
 - 2.6: Non-Container Schemas, User Provided Services & Synonyms
 - 2.7: Cross Container Services & Synonyms
-- 
+- 2.8: Cross Container From Outside Our Project
