@@ -34,4 +34,4 @@ URL: https://github.com/SAP-samples/hana-xsa-opensap-hana7/blob/master/install-a
 - 2.8: Cross Container From Outside Our Project
 - 2.9: Creating a Calculation View with a Dimension data type
 - 2.10: Creating a Calculation View with a Cube data type and Star Join
-
+- 2.11: Table Function as Data Source in Calculation View
