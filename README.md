@@ -35,3 +35,4 @@ URL: https://github.com/SAP-samples/hana-xsa-opensap-hana7/blob/master/install-a
 - 2.9: Creating a Calculation View with a Dimension data type
 - 2.10: Creating a Calculation View with a Cube data type and Star Join
 - 2.11: Table Function as Data Source in Calculation View
+- 2.12: Importing Calcuation Views (and other native DB objects) into the new CDS
