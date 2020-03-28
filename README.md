@@ -24,15 +24,27 @@ URL: https://github.com/SAP-samples/hana-xsa-opensap-hana7/tree/snippets_2.3.2
 Prerequisites for exercise 2.6 and 2.8:
 URL: https://github.com/SAP-samples/hana-xsa-opensap-hana7/blob/master/install-all-prerequsites.txt
 
+### Database Fundamental Artefacts
+
 - 2.1: Database Content
 - 2.2: Create Tables & Views via Core Data Services
 - 2.3: Create Table Data Configuration
 - 2.4: Create Tables & Views via SQL DDL Design Time Artifacts
 - 2.5: Create Structured Privilege & Role
+
+### Container Handling
+
 - 2.6: Non-Container Schemas, User Provided Services & Synonyms
 - 2.7: Cross Container Services & Synonyms
 - 2.8: Cross Container From Outside Our Project
+
+### Calculation Views
+
 - 2.9: Creating a Calculation View with a Dimension data type
 - 2.10: Creating a Calculation View with a Cube data type and Star Join
 - 2.11: Table Function as Data Source in Calculation View
 - 2.12: Importing Calcuation Views (and other native DB objects) into the new CDS
+
+### SQLscript
+
+- 2.13.1: Creating A Simple Stored Procedure
