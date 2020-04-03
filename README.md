@@ -50,3 +50,5 @@ URL: https://github.com/SAP-samples/hana-xsa-opensap-hana7/blob/master/install-a
 - 2.13.1: Creating A Simple Stored Procedure
 - 2.13.2: Create a Scalar User Defined Function
 - 2.13.3: Create a Table User Defined Function
+- 2.13.4: Libraries
+- 2.13.4.1: Creating User Defined Libraries

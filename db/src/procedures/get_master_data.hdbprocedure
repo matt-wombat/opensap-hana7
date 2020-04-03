@@ -1,0 +1,20 @@
+PROCEDURE "get_master_data"( 
+				OUT ex_emp_exists BOOLEAN,
+				OUT ex_employees "MD.Employees",
+				OUT ex_emp_count INT,
+				OUT ex_business_partners "MD.BusinessPartner",
+				OUT ex_bp_count INT )
+   LANGUAGE SQLSCRIPT
+   SQL SECURITY INVOKER
+   AS
+BEGIN USING "MasterData" as MData;
+
+	ex_emp_exists = MData:"employee_exists"('199999');
+	
+	CALL MData:"get_employee_data"( ex_employees );
+	ex_emp_count = MData:rowcount;
+	
+	CALL MData:"get_business_partner_data"( ex_business_partners );
+	ex_bp_count = MData:rowcount;
+	
+END
