@@ -13,7 +13,7 @@ BEGIN USING SQLSCRIPT_STRING AS LIB;
 
 	declare lv_index int;
 	declare lv_productid string;
-	declare lv_price string;
+	declare lv_price string;	
 	declare lt_products TABLE like :ex_tabout;
 	
 	lt_products.PRODUCTID[1] = 'HT-1000';
