@@ -52,3 +52,4 @@ URL: https://github.com/SAP-samples/hana-xsa-opensap-hana7/blob/master/install-a
 - 2.13.3: Create a Table User Defined Function
 - 2.13.4: Libraries
 - 2.13.4.1: Creating User Defined Libraries
+- 2.13.4.2: Leveraging Built-In Libraries
