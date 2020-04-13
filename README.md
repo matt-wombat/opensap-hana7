@@ -55,3 +55,4 @@ URL: https://github.com/SAP-samples/hana-xsa-opensap-hana7/blob/master/install-a
 - 2.13.4.2: Leveraging Built-In Libraries
 - 2.13.6: Table Manipulation
 - 2.13.6.1: Table Variable Operators
+- 2.13.6.2: MAP_MERGE Operator
