@@ -13,7 +13,7 @@ BEGIN
 	    EXECUTE IMMEDIATE 'SELECT count(*) FROM "MD.Products" where CATEGORY NOT IN (''Laser printers'')' ;
 	else 
 	    EXECUTE IMMEDIATE 'SELECT count(*) FROM "MD.Products" where CATEGORY NOT IN (''Laser printers'') AND ' 
-	      || :im_product_filter_string ;
+	      || ESCAPE_DOUBLE_QUOTES(:im_product_filter_string) ;
 	end if;
 	
     CALL "log_proc" (::CURRENT_OBJECT_NAME, ::CURRENT_OBJECT_SCHEMA);

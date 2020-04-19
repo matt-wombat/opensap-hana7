@@ -58,3 +58,4 @@ URL: https://github.com/SAP-samples/hana-xsa-opensap-hana7/blob/master/install-a
 - 2.13.6.2: MAP_MERGE Operator
 - 2.13.6.3: MAP_REDUCE Operator
 - 2.13.7.2: Breaking on Error
+- 2.13.8.4: SQLScript Analyzer
