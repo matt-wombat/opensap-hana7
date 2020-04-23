@@ -22,16 +22,11 @@ modules:
         properties:
           key: hdi-user-service
           service: '~{user-container-name}'
-  
       - name: cross-container-service-2
         group: SERVICE_REPLACEMENTS
-
         properties:
           key: ServiceName_2
-          service: ~{the-service-name}
-                            
-
-
+          service: '~{the-service-name}'
   - name: srv
     type: nodejs
     path: srv
@@ -49,6 +44,12 @@ modules:
     path: web
     requires:
       - name: openSAPHANA_00-uaa
+      - name: xsjs_api
+        group: destinations
+        properties:
+          name: xsjs_api
+          url: '~{url}'
+          forwardAuthToken: true
   - name: user_db
     type: hdb
     path: user_db
@@ -56,6 +57,17 @@ modules:
       - name: hdi_user_db
         properties:
           TARGET_CONTAIENR: '~{user-container-name}'
+  - name: xsjs
+    type: nodejs
+    path: xsjs
+    provides:
+      - name: xsjs_api
+        properties:
+          url: '${default-url}'
+    requires:
+      - name: openSAPHANA-db-hdi-container
+      - name: openSAPHANA_00-uaa
+      - name: db
 resources:
   - name: openSAPHANA-db-hdi-container
     type: com.sap.xs.hdi-container
@@ -78,11 +90,9 @@ resources:
     properties:
       user-container-name: '${service-name}'
     type: com.sap.xs.hdi-container
-
   - name: cross-container-service-2
     parameters:
-       service-name: openSAP.CentralDB.opensap-central-container
+      service-name: openSAP.CentralDB.opensap-central-container
     properties:
-       the-service-name: ${service-name}
+      the-service-name: '${service-name}'
     type: org.cloudfoundry.existing-service
-
