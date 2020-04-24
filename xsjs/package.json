@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "@sap/xsenv": "^1.2.9",
-    "@sap/xsjs": "3.7.0"
+    "@sap/xsjs": "^4.0.1"
   },
   "description": "my description",
   "devDependencies": {

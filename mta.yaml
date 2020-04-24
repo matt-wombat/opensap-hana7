@@ -68,6 +68,9 @@ modules:
       - name: openSAPHANA-db-hdi-container
       - name: openSAPHANA_00-uaa
       - name: db
+
+  
+
 resources:
   - name: openSAPHANA-db-hdi-container
     type: com.sap.xs.hdi-container
