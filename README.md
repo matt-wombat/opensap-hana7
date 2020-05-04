@@ -63,3 +63,5 @@ URL: https://github.com/SAP-samples/hana-xsa-opensap-hana7/blob/master/install-a
 ## EXERCISE 3: XSJS AND XSODATA SERVICES
 
 - 3.1: XSJS and XSODATA
+- 3.3: Exploring JavaScript Language Features
+- 
