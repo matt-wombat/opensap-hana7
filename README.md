@@ -67,3 +67,4 @@ URL: https://github.com/SAP-samples/hana-xsa-opensap-hana7/blob/master/install-a
 - 3.4: Creating an XSJS Service with outbound HTTP Connectivity
 - 3.5: User Provided Service as SQLCC
 - 3.6: Creating a Simple Odata V2 Service
+- 3.7: Creating an OData V2 Service with an Entity Relationship
