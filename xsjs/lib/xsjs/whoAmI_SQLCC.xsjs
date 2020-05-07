@@ -1,6 +1,6 @@
 /*eslint no-console: 0, no-unused-vars: 0, no-shadow: 0, new-cap: 0*/
 /*eslint-env node, es6 */
-var connection = $.hdb.getConnection();
+var connection = $.hdb.getConnection({"sqlcc": "xsjs.sqlcc_config", "pool": true});
 
 var query = `SELECT CURRENT_USER FROM "DUMMY"`;
 var rs = connection.executeQuery(query);
