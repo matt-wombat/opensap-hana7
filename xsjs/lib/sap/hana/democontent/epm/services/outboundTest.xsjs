@@ -8,7 +8,7 @@ function searchImages() {
     if (index === undefined) {
         index = 0;
     }
-    var dest = $.net.http.readDestination("sap.hana.democontent.epm.services", "images");
+    var dest = $.net.http.readDestination("sap.hana.democontent.epm.services", "images.00");
 
     var client = new $.net.http.Client();
     var req = new $.web.WebRequest($.net.http.GET, search);
