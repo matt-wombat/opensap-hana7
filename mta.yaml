@@ -39,6 +39,7 @@ modules:
           url: '${default-url}'
     requires:
       - name: openSAPHANA-db-hdi-container
+      - name: openSAPHANA_00-uaa
   - name: web
     type: html5
     path: web
@@ -48,6 +49,12 @@ modules:
         group: destinations
         properties:
           name: xsjs_api
+          url: '~{url}'
+          forwardAuthToken: true
+      - name: srv_api
+        group: destinations
+        properties:
+          name: srv_api
           url: '~{url}'
           forwardAuthToken: true
   - name: user_db
