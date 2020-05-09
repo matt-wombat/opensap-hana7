@@ -1,4 +1,5 @@
 service {
 	"UserView" as "Users" key("UserId")
-	create using "xsjs:usersCreateMethod.xsjslib::usersCreate";
+	create using 
+		"xsjs:usersCreateMethod.xsjslib::usersCreate";
 }
