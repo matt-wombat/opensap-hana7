@@ -72,6 +72,9 @@ URL: https://github.com/SAP-samples/hana-xsa-opensap-hana7/blob/master/install-a
  
 ## EXERCISE 4 – NODE.JS
 
+Troubleshooting for node.js services:
+Errors occurring on CDS Build as well as on running node.js application fixed by changing dependency to @sap/cds to "3.21.1" or "3.21.x" in package.json in app root as well as srv subfolder. Used HANA Express VM based on HANA 2.00 SPS04.
+
 - 4.1: Odata V4 services
 
 
