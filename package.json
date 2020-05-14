@@ -10,7 +10,7 @@
         "hdb": "^0.17.1"
     },
     "engines": {
-        "node": "^8.9"
+        "node": "8.x"
     },
     "scripts": {
         "build": "cds build/all --clean",

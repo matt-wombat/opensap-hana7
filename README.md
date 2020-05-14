@@ -79,5 +79,6 @@ Troubleshooting Error _addUrlAsLink when running xsjs and nodejs on SAP HANA Exp
 Updating of node.js-Version and other dependencies in xsjs/package.json node to 10.x, xsjs to ^5.2.0, xsjs-test to ^3.1.2, xsenv to ^2.0.0
 
 - 4.1: Odata V4 services
+- 4.2: Modules and Express
 
 

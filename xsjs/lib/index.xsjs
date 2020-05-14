@@ -1,3 +1,3 @@
 $.response.contentType = "text/plain";
 
-$.response.setBody("Hello World");
+$.response.setBody("Hello World XSJS");
