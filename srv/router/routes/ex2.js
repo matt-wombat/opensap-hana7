@@ -134,7 +134,7 @@ module.exports = () => {
 		try {
 			const dbClass = require(global.__base + "utils/dbPromises");
 			let db = new dbClass(req.db);
-			const statement = await	db.preparePromisified(`SELECT SESSION_USER, CURRENT_SCHEMA FROM "DUMMY"`)
+			const statement = await	db.preparePromisified(`SELECT SESSION_USER, CURRENT_SCHEMA FROM "DUMMY"`);
 			const results = await db.statementExecPromisified(statement, []);
 			let result = JSON.stringify({
 				Objects: results
@@ -144,6 +144,110 @@ module.exports = () => {
 			return res.type("text/plain").status(500).send(`ERROR: ${err.toString()}`);
 		}
 	});
+	
+	// Simple Database Call Stored Procedure
+	app.get("/procedures",(req,res) => {
+		var client = req.db;
+		var hdbext = require("@sap/hdbext");
+		// Parameters of loadProcedure: client, Schema, Procedure, callback
+		hdbext.loadProcedure(client, null, "get_po_header_data", (err,sp) => {
+			if (err) {
+				res.type("text/plain").status(500).send(`ERROR: ${err.toString()}`);
+				return;
+			}
+			
+			// Parameters of sp (Stored Procedure): 
+			// Input Parameters (According to definition of sp), callback (errors, Output Scalar Parameters, [Output Table Parameters])
+			sp({}, (err,parameters,results) => {
+				if (err) {
+					res.type("text/plain").status(500).send(`ERROR: ${err.toString()}`);
+					return;
+				}
+				
+				var result = JSON.stringify({EX_TOP_3_EPM_PO_COMBINED_CNT: results});
+				res.type("application/json").status(200).send(result);
+			});
+		});
+	});
+	
+	// Database Call Stored Procedure with Inputs
+	app.get("/procedures2/:partnerRole?",(req,res) => {
+		var client = req.db;
+		var hdbext = require("@sap/hdbext");
+		var partnerRole = req.params.partnerRole;
+		var inputParams = "";
+		if (typeof partnerRole === "undefined" || partnerRole === null) {
+			inputParams = {};
+		} else {
+			inputParams = { IM_PARTNERROLE: partnerRole };
+		}
+		
+		// Parameters of loadProcedure: client, Schema, Procedure, callback
+		hdbext.loadProcedure(client, null, "get_bp_addresses_by_role", (err,sp) => {
+			if (err) {
+				res.type("text/plain").status(500).send(`ERROR: ${err.toString()}`);
+				return;
+			}
 
+			// Parameters of sp (Stored Procedure): 
+			// Input Parameters (According to definition of sp), callback (errors, Output Scalar Parameters, [Output Table Parameters])
+			sp(inputParams, (err,parameters,results) => {
+				if (err) {
+					res.type("text/plain").status(500).send(`ERROR: ${err.toString()}`);
+					return;
+				}
+				
+				var result = JSON.stringify({EX_BP_ADDRESSES: results});
+				res.type("application/json").status(200).send(result);
+			});
+		});
+	});
+	
+	// Call 2 Database Stored Procedures in Parallel
+	app.get("/proceduresParallel/",(req,res) => {
+		var client = req.db;
+		var hdbext = require("@sap/hdbext");
+		var inputParams = {IM_PARTNERROLE: 1};
+		var result = {};
+		
+		async.parallel([
+			function(cb) {
+				// Parameters of loadProcedure: client, Schema, Procedure, callback
+				hdbext.loadProcedure(client,null,"get_po_header_data",(err,sp) => {
+					if (err) {
+						cb(err);
+						return;
+					}
+
+					// Input Parameters (According to definition of sp), callback (errors, Output Scalar Parameters, [Output Table Parameters])
+					sp(inputParams,(err,parameters,results) => {
+						result.EX_TOP_3_EMP_PO_COMBINED_CNT = results;	
+						cb();
+					});
+				});
+			},
+			function(cb) {
+				// Parameters of loadProcedure: client, Schema, Procedure, callback
+				hdbext.loadProcedure(client,null,"get_bp_addresses_by_role",(err,sp) => {
+					if (err) {
+						cb(err);
+						return;
+					}
+				
+					// Input Parameters (According to definition of sp), callback (errors, Output Scalar Parameters, [Output Table Parameters])
+					sp(inputParams,(err,parameters,results) => {
+						result.EX_BP_ADDRESSES = results;
+						cb();
+					});
+				});
+			}], (err) => {
+				if (err) {
+					res.type("text/plain").status(500).send(`ERROR: ${err.toString()}`);
+				} else {
+					res.type("application/json").status(200).send(JSON.stringify(result));
+				}
+			});
+	});
+	
 	return app;
 };
