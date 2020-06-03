@@ -1,6 +1,13 @@
 {
 	"welcomeFile": "index.html",
 	"authenticationMethod": "route",
+	"logout": {
+		"logoutPage": "/logout.html",
+		"logoutEndpoint": "/my/logout"
+	},
+	"websockets": {
+		"enabled": true	
+	},
 	"routes": [{
 		"source": "/catalog/(.*)",
 		"destination": "srv_api",
