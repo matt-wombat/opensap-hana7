@@ -12,6 +12,13 @@ Resolutions are stored in the following GitHub repository provided by SAP:
 
 URL: https://github.com/SAP-samples/hana-xsa-opensap-hana7/tree/snippets_2.3.2
 
+# Prerequisites
+
+In order to build the repository the following prerequisites for exercise 2.6 and 2.8 need to be met:
+
+See install-all-prerequisites.txt
+Source-URL: https://github.com/SAP-samples/hana-xsa-opensap-hana7/blob/master/install-all-prerequsites.txt
+
 # Exercises
 
 ## Exercise 1: Hello World
@@ -20,9 +27,6 @@ URL: https://github.com/SAP-samples/hana-xsa-opensap-hana7/tree/snippets_2.3.2
 - 1.2: Clone a Repository from Git
 
 ## Exercise 2: Database Artifact Development
-
-Prerequisites for exercise 2.6 and 2.8:
-URL: https://github.com/SAP-samples/hana-xsa-opensap-hana7/blob/master/install-all-prerequsites.txt
 
 ### Database Fundamental Artefacts
 
