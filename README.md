@@ -14,6 +14,8 @@ URL: https://github.com/SAP-samples/hana-xsa-opensap-hana7/tree/snippets_2.3.2
 
 # Prerequisites
 
+First and most important is to activate the HXE tenant database in XS Advanced Cockpit and map it to Organization HANAexpress and Space development with default option.
+
 In order to build the repository the following prerequisites for exercise 2.6 and 2.8 need to be met:
 
 See install-all-prerequisites.txt
