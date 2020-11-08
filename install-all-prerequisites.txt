@@ -34,6 +34,6 @@ xs create-service auditlog free openSAP-ex-log
 
 xs create-service sapui5_sb sapui5-1.52 openSAP-ui5
 
-xs create-role openSAPHANA-ex Viewer Viewer_300 -a "{\"client\":{\"value\":\"300\",\"source\":\"static\"},\"country\":{\"value\":\"US\",\"source\":\"static\"}}"
+xs create-role openSAPHANA-00 Viewer Viewer_300 -a "{\"client\":{\"value\":\"300\",\"source\":\"static\"},\"country\":{\"value\":\"US\",\"source\":\"static\"}}"
 
-xs create-role openSAPHANA-ex Editor Editor_300 -a "{\"client\":{\"value\":\"300\",\"source\":\"static\"}}"
+xs create-role openSAPHANA-00 Editor Editor_300 -a "{\"client\":{\"value\":\"300\",\"source\":\"static\"}}"
