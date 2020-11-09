@@ -88,5 +88,6 @@ Updating of node.js-Version and other dependencies in xsjs/package.json node to 
 - 4.2: Modules and Express
 - 4.3: HANA Database Access from Node.js
 - 4.4: Asynchronous Non-Blocking I/O
+- 4.5: Exploring JavaScript Language Features
 
 
