@@ -12,6 +12,14 @@ Resolutions are stored in the following GitHub repository provided by SAP:
 
 URL: https://github.com/SAP-samples/hana-xsa-opensap-hana7/tree/snippets_2.3.2
 
+# Environment
+
+This repository is developed and tested in SAP HANA Express VM in the following configuration:
+
+SAP HANA 2.0, express edition 2.0 SPS 04 2.00.045.00.1575639312
+SUSE Linux Enterprise Server for SAP Applications 12 SP2OS Kernel Version 4.4.121-92.125-default
+VMware Workstation Player 16.0.0-16894299
+
 # Prerequisites
 
 First and most important is to activate the HXE tenant database in XS Advanced Cockpit and map it to Organization HANAexpress and Space development with default option.
@@ -90,5 +98,4 @@ Updating of node.js-Version and other dependencies in xsjs/package.json node to 
 - 4.4: Asynchronous Non-Blocking I/O
 - 4.5: Exploring JavaScript Language Features
 - 4.6: Text Bundles
-
 
