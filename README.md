@@ -100,3 +100,4 @@ Updating of node.js-Version and other dependencies in xsjs/package.json node to 
 - 4.6: Text Bundles
 - 4.7: Open Source Modules
 - 4.8: JavaScript Object Oriented
+- 4.9: Web Sockets
