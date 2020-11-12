@@ -11,4 +11,5 @@ module.exports = (app, server) => {
 	app.use("/node/excel",require("./routes/excel")());
 	app.use("/node/xml",require("./routes/xml")());
 	app.use("/node/zip",require("./routes/zip")());
+	app.use("/node/oo",require("./routes/oo")());
 };

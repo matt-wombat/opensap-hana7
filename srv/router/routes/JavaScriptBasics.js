@@ -182,7 +182,7 @@ module.exports = () => {
 							return res.type("text/plain").status(500).send(`ERROR: ${err.toString()}`);
 						} else {
 							for (let result of results) {
-								result.DISCOUNT = (result.GROSSAMOUNT * .10);
+								result.GROSSAMOUNTPLUS1 = (result.GROSSAMOUNT * 1 + 1);
 								result.DISCOUNTAMOUNT = (result.GROSSAMOUNT - result.GROSSAMOUNT * .10);
 							}
 							return res.type("application/json").status(200).send(JSON.stringify(results));
