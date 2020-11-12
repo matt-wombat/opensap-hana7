@@ -12,4 +12,5 @@ module.exports = (app, server) => {
 	app.use("/node/xml",require("./routes/xml")());
 	app.use("/node/zip",require("./routes/zip")());
 	app.use("/node/oo",require("./routes/oo")());
+	app.use("/node/chat",require("./routes/chatServer")(server));
 };
