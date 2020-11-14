@@ -98,6 +98,7 @@ Updating of node.js-Version and other dependencies in xsjs/package.json node to 
 - 4.4: Asynchronous Non-Blocking I/O
 - 4.5: Exploring JavaScript Language Features
 - 4.6: Text Bundles
-- 4.7: Open Source Modules
+- 4.7: Open Source Modules -> Excel, ZIP, XML
 - 4.8: JavaScript Object Oriented
-- 4.9: Web Sockets
+- 4.9: Web Sockets -> Chat Application
+- 4.10: Odata V4 Services with Exits
