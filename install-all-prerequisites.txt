@@ -32,7 +32,7 @@ xs create-service xsuaa space openSAPHANA_00-uaa -c xs-security.json
 
 xs create-service auditlog free openSAP-ex-log
 
-xs create-service sapui5_sb sapui5-1.52 openSAP-ui5
+xs create-service sapui5_sb sapui5-1.52 openSAPHANA_00-ui5
 
 xs create-role openSAPHANA-00 Viewer Viewer_300 -a "{\"client\":{\"value\":\"300\",\"source\":\"static\"},\"country\":{\"value\":\"US\",\"source\":\"static\"}}"
 

@@ -31,12 +31,12 @@ Source-URL: https://github.com/SAP-samples/hana-xsa-opensap-hana7/blob/master/in
 
 # Exercises
 
-## Exercise 1: Hello World
+## Exercise 1 - Hello World
 
 - 1.1: HTML5 Module - Hello World with Security Implementation
 - 1.2: Clone a Repository from Git
 
-## Exercise 2: Database Artifact Development
+## Exercise 2 - Database Artifact Development
 
 ### Database Fundamental Artefacts
 
@@ -74,7 +74,7 @@ Source-URL: https://github.com/SAP-samples/hana-xsa-opensap-hana7/blob/master/in
 - 2.13.7.2: Breaking on Error
 - 2.13.8.4: SQLScript Analyzer
 
-## EXERCISE 3: XSJS AND XSODATA SERVICES
+## EXERCISE 3 - XSJS AND XSODATA SERVICES
 
 - 3.1: XSJS and XSODATA
 - 3.3: Exploring JavaScript Language Features
@@ -102,3 +102,8 @@ Updating of node.js-Version and other dependencies in xsjs/package.json node to 
 - 4.8: JavaScript Object Oriented
 - 4.9: Web Sockets -> Chat Application
 - 4.10: Odata V4 Services with Exits
+
+
+## ExERCISE 5 - SAPUI5/Fiori User Interface
+
+- 5.1: SAPUI5 as an XSA Micro-Service

@@ -27,6 +27,7 @@ modules:
         properties:
           key: ServiceName_2
           service: '~{the-service-name}'
+      - name: openSAPHANA_00-ui5
   - name: srv
     type: nodejs
     path: srv
@@ -57,6 +58,7 @@ modules:
           name: srv_api
           url: '~{url}'
           forwardAuthToken: true
+      - name: openSAPHANA_00-ui5
   - name: user_db
     type: hdb
     path: user_db
@@ -115,3 +117,8 @@ resources:
     type: org.cloudfoundry.existing-service
     parameters:
       service-name: CROSS_SCHEMA_SFLIGHT_00
+  - name: openSAPHANA_00-ui5
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: sapui5_sb
+      service-plan: sapui5-1.52
