@@ -104,7 +104,7 @@ Updating of node.js-Version and other dependencies in xsjs/package.json node to 
 - 4.10: Odata V4 Services with Exits
 
 
-## ExERCISE 5 - SAPUI5/Fiori User Interface
+## EXERCISE 5 - SAPUI5/Fiori User Interface
 
 - 5.1: SAPUI5 as an XSA Micro-Service
 - 5.2: Creating a Text Bundle
