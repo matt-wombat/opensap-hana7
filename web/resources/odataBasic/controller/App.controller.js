@@ -19,9 +19,30 @@ sap.ui.define([
 			var bpModel = this.getOwnerComponent().getModel("bpModel");
 			var oTable = this.getView().byId("bpTable");
 			
-			oTable.setModel(bpModel);
-			oTable.setEntitySet("BusinessPartners");
-			oTable.setInitiallyVisibleFields("PARTNERID,COMPANYNAME,PARTNERROLE");
+			// oTable.setModel(bpModel);
+			// oTable.setEntitySet("BusinessPartners");
+			// oTable.setInitiallyVisibleFields("PARTNERID,COMPANYNAME,PARTNERROLE");
+			
+			function fnLoadMetadata() {
+				try {
+					oTable.setModel(bpModel);
+					oTable.setEntitySet("BusinessPartners");
+					var oMeta = bpModel.getServiceMetadata();
+					var headerFields = "";
+					for (var i = 0; i < oMeta.dataServices.schema[0].entityType[0].property.length; i++) {
+						var property = oMeta.dataServices.schema[0].entityType[0].property[i];
+						headerFields += property.name + ",";
+					}
+					oTable.setInitiallyVisibleFields(headerFields);
+				} catch (e) {
+					console.log(e.toString());
+				}
+			}
+			bpModel.attachMetadataLoaded(bpModel, function() {
+				fnLoadMetadata();
+			});
+			fnLoadMetadata();			
+			
 		},
 
 		onErrorCall: function(oError) {
