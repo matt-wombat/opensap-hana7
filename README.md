@@ -112,3 +112,4 @@ Updating of node.js-Version and other dependencies in xsjs/package.json node to 
 - 5.4: Consume XSJS Services via JQuery AJAX calls
 - 5.5: Consume a Basic OData V2 Service within SAPUI5 binding the service to a Table
 - 5.6: Use oData V2 Metadata to dynamically create the columns.
+- 5.7: Consume an OData V2 Service with Create Option
