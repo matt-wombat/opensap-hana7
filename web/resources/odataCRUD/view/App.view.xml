@@ -17,6 +17,7 @@
 					</List>
 					<Button text="{i18n>B3}" press="callUserService"/>
 					<Button text="{i18n>B4}" press="callUserUpdate"/>
+					<Button text="{i18n>B5}" press="onBatchDialogPress"/>
 				</Panel>
 				<VBox fitContainer="true">
 					<smartTable:SmartTable id="userTable" header="{i18n>UList}" editable="false" entitySet="Users" showRowCount="true" enableAutoBinding="true"
