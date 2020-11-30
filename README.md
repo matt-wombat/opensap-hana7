@@ -27,7 +27,7 @@ First and most important is to activate the HXE tenant database in XS Advanced C
 In order to build the repository the following prerequisites for exercise 2.6 and 2.8 need to be met:
 
 See install-all-prerequisites.txt
-Source-URL: https://github.com/SAP-samples/hana-xsa-opensap-hana7/blob/master/install-all-prerequsites.txt
+Source-URL: https://github.com/mattxdev/opensap-hana7/blob/master/install-all-prerequisites.txt
 
 # Exercises
 
@@ -114,4 +114,5 @@ Updating of node.js-Version and other dependencies in xsjs/package.json node to 
 - 5.6: Use oData V2 Metadata to dynamically create the columns.
 - 5.7: Consume an OData V2 Service with Create Option
 - 5.8: OData V2 Batch Operation
-- 5.9: OData V2 Deep Insert (Content-ID and Links) (Does not work)
+- 5.9: OData V2 Deep Insert (Content-ID and Links) (Does not work)#
+- 5.10: OData V4 and Fiori Annotations
