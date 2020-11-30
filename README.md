@@ -114,5 +114,5 @@ Updating of node.js-Version and other dependencies in xsjs/package.json node to 
 - 5.6: Use oData V2 Metadata to dynamically create the columns.
 - 5.7: Consume an OData V2 Service with Create Option
 - 5.8: OData V2 Batch Operation
-- 5.9: OData V2 Deep Insert (Content-ID and Links) (Does not work)#
-- 5.10: OData V4 and Fiori Annotations
+- 5.9: OData V2 Deep Insert (Content-ID and Links) (Does not work due to CSRF)
+- 5.10: OData V4 and Fiori Annotations (Does not show Purchase Order Header Column Headers)
