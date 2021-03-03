@@ -10,6 +10,7 @@
 	},
 	"routes": [{
 		"source": "/catalog/(.*)",
+		"target": "/odata/v4/opensap.hana.CatalogService/$1",
 		"destination": "srv_api",
 		"csrfProtection": true,
 		"authenticationType": "xsuaa"
